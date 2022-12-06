@@ -1,4 +1,114 @@
-.header {
-  background: hsl(42deg, 92%, 55%);
-  height: 100px;
+.header-div {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  font-family: "Nunito", sans-serif;
+  font-size: x-large;
+}
+.header-div .logo {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+.header-div .logo img {
+  height: 60px;
+}
+.header-div .navigation {
+  width: 80%;
+}
+.header-div .navigation nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header-div .navigation a.active {
+  background-color: hsl(42deg, 92%, 55%);
+  color: white;
+}
+.header-div .navigation li {
+  display: inline;
+}
+.header-div .navigation a {
+  color: black;
+  text-decoration: none;
+  padding: 14px 16px;
+  display: block;
+}
+.header-div .navigation a:active {
+  text-decoration: underline;
+}
+.header-div .navigation a:hover {
+  background-color: hsl(42deg, 92%, 75%);
+  color: white;
+}
+.header-div .navigation .icon {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  nav ul {
+    font-size: large;
+  }
+  a {
+    padding: 12px 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navigation a:not(:first-child) {
+    display: none;
+  }
+  .navigation a.icon {
+    float: right;
+    display: block;
+  }
+  .navigation.responsive {
+    position: relative;
+  }
+  .navigation a.icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .navigation a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .top-image {
+  background-color: hsl(172deg, 29%, 71%);
+  height: 600px;
+  width: 80%;
+}
+main .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .text h1 {
+  font-family: "Nunito", sans-serif;
+}
+main .paragraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+}
+main .tour-link {
+  font-family: "Source Sans Pro", sans-serif;
+}
+main .tour-link a {
+  color: black;
+  text-decoration: none;
+}
+main .tour-link a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

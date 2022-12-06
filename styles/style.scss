@@ -1,6 +1,4 @@
 @import "partials/variables.scss";
-
-.header {
-    background: $yellowsun;
-    height: 100px;
-}
+@import "partials/mixins.scss";
+@import "partials/header.scss";
+@import "partials/main.scss";
