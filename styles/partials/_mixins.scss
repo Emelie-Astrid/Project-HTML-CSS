@@ -1,3 +1,15 @@
+//FLEXBOX
+@mixin mobile-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+//TEXT
 
-
+//IMAGES
+@mixin top-image {
+    background-color: $mintgreen;
+        height:400px;
+        width:100%;
+}

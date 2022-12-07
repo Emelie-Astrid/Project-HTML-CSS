@@ -36,9 +36,6 @@
   padding: 14px 16px;
   display: block;
 }
-.header-div .navigation a:active {
-  text-decoration: underline;
-}
 .header-div .navigation a:hover {
   background-color: hsl(42deg, 92%, 75%);
   color: white;
@@ -84,8 +81,8 @@ main {
 }
 main .top-image {
   background-color: hsl(172deg, 29%, 71%);
-  height: 600px;
-  width: 80%;
+  height: 400px;
+  width: 100%;
 }
 main .text {
   display: flex;
@@ -96,9 +93,6 @@ main .text h1 {
   font-family: "Nunito", sans-serif;
 }
 main .paragraph {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: "Source Sans Pro", sans-serif;
   text-align: center;
 }
@@ -111,4 +105,62 @@ main .tour-link a {
 }
 main .tour-link a:hover {
   text-decoration: underline;
+}
+
+.footer-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: large;
+  background-color: hsl(171deg, 30%, 91%);
+}
+.footer-div img {
+  height: 60px;
+}
+.footer-div .links {
+  width: 100%;
+}
+.footer-div nav ul {
+  list-style-position: inside;
+  list-style-type: none;
+  font-weight: 600;
+}
+.footer-div nav ul li {
+  padding: 5px 7px;
+}
+.footer-div ul li {
+  list-style-position: inside;
+}
+.footer-div a {
+  color: black;
+  text-decoration: none;
+  padding: 5px 8px;
+}
+.footer-div a.active {
+  text-decoration: underline;
+}
+.footer-div a:hover {
+  background-color: hsl(42deg, 92%, 75%);
+  color: white;
+}
+.footer-div .social-media-links {
+  display: flex;
+  align-items: center;
+}
+.footer-div .social-media-links .fa-brands {
+  padding: 7px;
+}
+
+@media (max-width: 820px) {
+  .footer-div {
+    display: flex;
+    align-items: flex-start;
+  }
+  .social-media-text {
+    visibility: hidden;
+  }
 }/*# sourceMappingURL=style.css.map */

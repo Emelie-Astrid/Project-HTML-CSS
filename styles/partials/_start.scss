@@ -1,27 +1,19 @@
-@mixin main-flex {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 
 main {
-    @include main-flex;
+    @include mobile-flex;
     
     .top-image {
-        background-color: $mintgreen;
-        height:600px;
-        width:80%;
+        @include top-image
     }
 
     .text {
-        @include main-flex;
+        @include mobile-flex;
         h1 {
             font-family: $nunito;
         }
     }
 
     .paragraph {
-        @include main-flex;
         font-family: $ssp;
         text-align: center;
     }
