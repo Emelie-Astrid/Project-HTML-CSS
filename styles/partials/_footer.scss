@@ -8,6 +8,7 @@
     font-family: $ssp;
     font-size: large;
     background-color: $barelymint;
+    margin-top: 70px;
 
     img {
         height: 60px;
@@ -60,6 +61,6 @@
         align-items: flex-start;
     }
     .social-media-text {
-        visibility: hidden;
+        display:none;
     }
 }

@@ -1,0 +1,136 @@
+
+main {
+    @include flex;
+    
+    .top-image {
+        background-color: $mintgreen;
+        height:400px;
+        width:100%;
+    }
+
+    .text {
+        @include flex;
+        h1 {
+            font-family: $nunito;
+        }
+        margin-bottom: 70px;
+    }
+
+    .paragraph {
+        font-family: $ssp;
+        text-align: center;
+    }
+
+    .tour-link {
+        font-family: $ssp;
+        a {
+            color: black;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }  
+    }
+    .sorting-buttons {
+        margin-bottom: 70px;     
+    }
+
+    .tour-slideshow {
+        background-color: $yellowsun;
+        height:300px;
+        width:100%;
+    }
+
+    .our-tours {
+        width:100%;
+        font-family: $ssp;
+
+        .tour-display {
+            display:flex;
+            height:180px;
+            width:100%;
+            background-color: $barelymint;
+            margin-bottom: 10px;
+
+            .tour-image {
+                width: 50%;
+                background-color: $halfsun;
+            }
+
+            .tour-text {
+                display:flex;
+                flex-direction: column;
+                width:50%;
+                
+                .tour-header {
+                    display:flex;
+                    align-items: center;
+                    height:30px;
+                    background-color: $yellowsun;
+                }
+
+                .tour-description {
+                    height:70px;
+                    background-color: $tokyored;
+                }
+
+                .tour-date {
+                    display:flex;
+                    align-items: center;
+                    height:30px;
+                    background-color: $mintgreen;
+                }
+                
+                .tour-price-and-booking {
+                    display:flex;
+                    justify-content: space-between;
+                    height: 50px;
+                    background-color: $midnightblue;
+                    .tour-price {
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 50%;
+                        background-color: $palemidnightblue;
+                    }
+                    .tour-booking {
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $halfsun;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .tokyo-tours-staff {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $halfsun;
+        width: 100%;
+
+        .staff-member {
+            display:flex;
+            background-color: yellow;
+            height: 500px;
+            width: 400px;
+            margin: 10px;
+
+            .staff-image {
+                background-color: red;
+                height: 250px;
+                width:100px;
+
+            }
+
+            .staff-info {
+                background-color: aquamarine;
+                height: 250px;
+                width:100px;
+            }
+        }
+    }
+}
