@@ -223,16 +223,28 @@ main .tokyo-tours-staff {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 820px) {
+  main .tokyo-tours-staff {
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 main .tokyo-tours-staff .staff-member {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: hsl(42deg, 92%, 55%);
+  background-color: hsl(42deg, 92%, 75%);
   height: 500px;
   width: 350px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 main .tokyo-tours-staff .staff-member .staff-image {
   background-color: hsl(3deg, 80%, 70%);
