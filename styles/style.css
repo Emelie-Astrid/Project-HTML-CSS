@@ -84,26 +84,54 @@ main {
   flex-direction: column;
   align-items: center;
 }
-main .top-image {
-  background-color: hsl(172deg, 29%, 71%);
-  height: 400px;
-  width: 100%;
-}
-main .text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 70px;
-}
-main .text h1 {
+main h1 {
   font-family: "Nunito", sans-serif;
 }
-main .paragraph {
-  font-family: "Source Sans Pro", sans-serif;
-  text-align: center;
+main h2 {
+  font-family: "Nunito", sans-serif;
 }
-main .tour-link {
+main h3 {
+  font-family: "Nunito", sans-serif;
+}
+main h4 {
+  font-family: "Nunito", sans-serif;
+}
+main h5 {
+  font-family: "Nunito", sans-serif;
+}
+main h6 {
+  font-family: "Nunito", sans-serif;
+}
+main p {
   font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+}
+main a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+}
+main #top-image {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 820px) {
+  main #top-image {
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+  }
+}
+main section {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 500px) {
+  main section {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
 }
 main .tour-link a {
   color: black;
@@ -121,13 +149,11 @@ main .tour-slideshow {
   width: 100%;
 }
 main .our-tours {
-  width: 100%;
-  font-family: "Source Sans Pro", sans-serif;
+  width: 350px;
 }
 main .our-tours .tour-display {
   display: flex;
-  height: 180px;
-  width: 100%;
+  height: 200px;
   background-color: hsl(171deg, 30%, 91%);
   margin-bottom: 10px;
 }
@@ -139,6 +165,7 @@ main .our-tours .tour-display .tour-text {
   display: flex;
   flex-direction: column;
   width: 50%;
+  margin: 5px;
 }
 main .our-tours .tour-display .tour-text .tour-header {
   display: flex;
@@ -159,7 +186,6 @@ main .our-tours .tour-display .tour-text .tour-date {
 main .our-tours .tour-display .tour-text .tour-price-and-booking {
   display: flex;
   justify-content: space-between;
-  height: 50px;
   background-color: hsl(238deg, 45%, 31%);
 }
 main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-price {
@@ -176,29 +202,152 @@ main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking {
   background-color: hsl(42deg, 92%, 75%);
   width: 50%;
 }
+@media (min-width: 500px) {
+  main .tokyo-tours-history {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+}
+main .tokyo-tours-history article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .tokyo-tours-history aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 main .tokyo-tours-staff {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: hsl(42deg, 92%, 75%);
-  width: 100%;
 }
 main .tokyo-tours-staff .staff-member {
   display: flex;
-  background-color: yellow;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(42deg, 92%, 55%);
   height: 500px;
-  width: 400px;
-  margin: 10px;
+  width: 350px;
+  margin-bottom: 10px;
 }
 main .tokyo-tours-staff .staff-member .staff-image {
-  background-color: red;
+  background-color: hsl(3deg, 80%, 70%);
   height: 250px;
-  width: 100px;
+  width: 250px;
+  border-radius: 50%;
 }
 main .tokyo-tours-staff .staff-member .staff-info {
-  background-color: aquamarine;
-  height: 250px;
-  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: hsl(171deg, 30%, 91%);
+  width: 300px;
+}
+main .customer-reviews {
+  background-color: white;
+}
+main .customer-reviews .review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 350px;
+  height: 400px;
+  background-color: hsl(171deg, 30%, 91%);
+  margin-bottom: 250px;
+  padding: 5px;
+}
+main .customer-reviews .review .user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: hsl(12deg, 80%, 49%);
+}
+main .customer-reviews .review .user .user-image {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: hsl(42deg, 92%, 75%);
+}
+main .customer-reviews .review .user .user-name {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(42deg, 92%, 55%);
+}
+main .customer-reviews .review .user .user-name p {
+  margin: 0px;
+}
+main .customer-reviews .review .rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background-color: hsl(3deg, 80%, 70%);
+}
+main .customer-reviews .review .rating .rating-circle {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: hsl(12deg, 80%, 49%);
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+main .customer-reviews .review .rating .rating-circle:nth-child(5) {
+  background-color: transparent;
+}
+main .customer-reviews .review .date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background-color: hsl(238deg, 45%, 51%);
+}
+main .customer-reviews .review .review-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background-color: hsl(42deg, 92%, 75%);
+  font-weight: bold;
+}
+main .customer-reviews .review .review-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  background-color: hsl(42deg, 92%, 55%);
+}
+main .customer-reviews .review .read-more-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background-color: hsl(238deg, 45%, 31%);
+}
+main .tokyo-tours-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main .contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  background-color: hsl(171deg, 30%, 91%);
 }
 
 .footer-div {
