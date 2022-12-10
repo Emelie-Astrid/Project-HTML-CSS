@@ -11,6 +11,13 @@
 	align-items: center;
 }
 
+@mixin flex-wrap {
+	height: auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 //TEXT AND LINKS
 
 @mixin header {
@@ -37,11 +44,9 @@
 @mixin p-text {
 	p {
 		font-family: $ssp;
-		font-size: 14px;
 	}
 	a {
 		font-family: $ssp;
-		font-size: 14px;
 	}
 }
 
@@ -51,6 +56,17 @@
 		max-width: 500px;
 		height: auto;
 	}
+}
+
+
+@mixin input-styling {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 2px solid $yellowsun;
+	border-radius: 8px;
+	background-color: $halfsun;
+	font-size: 16px;
 }
 
 //IMAGES

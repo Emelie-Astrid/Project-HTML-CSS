@@ -47,37 +47,36 @@
         </div>
     </header>
     <main>
-        <img src="../assets/tokyo-skyline.jpg" alt="Tokyo Skyline" id="top-image">
-        <h1>CONTACT</h1>
-        <div class="tokyo-tours-contact">
-            <div class="tokyo-tours-address">
-                <p>Tokyo Tours </br> 
+        <section class="tokyo-tours-contact">
+            <img src="../assets/top-contact.jpg" alt="Skyscraper viewed from above" id="top-image">
+            <section class="address-and-phone-number">
+                <h1>CONTACT</h1>
+                <h2>Address:</h2>
+                <p>Tokyo Tours</br> 
                 The Second street, no.3 </br>
-                198 76 City
-                </p>
-            </div>
-            <div class="tokyo-tours-phone-number">
-                <p>08 - 987 54 21</p>
-            </div>
-        </div>
-        <div class="contact-us">
+                198 76 City</p>
+                <h3>Phone:</h3>
+                <p>+81-3-5330-5255</p>
+            </section>
+        </section>
+        <section class="contact-us">
             <h2>QUESTIONS?</h2>
             <form>
                 <label for="questions">What is your question about?</label><br/>
-                <select name="questions" id="question">
+                <select name="questions" aria-labelledby="text-input">
                     <option disabled hidden selected>Choose here</option>
                     <option value="">Booking</option>
                     <option>Questions about tour</option>
                     <option>Feedback</option>
                     <option>Other</option>
                 </select><br/>
-                <p><label for="text-input">Tell us more</label></p>
-                <textarea name="text-input" placeholder="Write here" rows="10" cols="35"></textarea><br/><br/>
+                <label for="text-input" aria-labelledby="text-input">Tell us more:</label>
+                <textarea name="text-input" placeholder="Write here"></textarea><br/>
                 <label for="user-email">Your email:</label><br>
                 <input type="email" placeholder="name@mail.com" aria-labelledby="email-input" name="email-input"><br><br>
                 <input type="submit" value="Submit">
             </form>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="footer-div">

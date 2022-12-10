@@ -104,11 +104,9 @@ main h6 {
 }
 main p {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 14px;
 }
 main a {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 14px;
 }
 main #top-image {
   width: 100%;
@@ -121,13 +119,13 @@ main #top-image {
     height: auto;
   }
 }
-main section {
+main .intro {
   text-align: center;
   width: 100%;
   height: auto;
 }
 @media (min-width: 500px) {
-  main section {
+  main .intro {
     width: 100%;
     max-width: 500px;
     height: auto;
@@ -149,17 +147,50 @@ main .tour-slideshow {
   width: 100%;
 }
 main .our-tours {
-  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 820px) {
+  main .our-tours {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
 }
 main .our-tours .tour-display {
   display: flex;
   height: 200px;
-  background-color: hsl(171deg, 30%, 91%);
-  margin-bottom: 10px;
+  width: 100%;
+  margin: 10px;
 }
-main .our-tours .tour-display .tour-image {
+@media (min-width: 820px) {
+  main .our-tours .tour-display {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+main .our-tours .tour-display img {
   width: 50%;
   background-color: hsl(42deg, 92%, 75%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 820px) {
+  main .our-tours .tour-display img {
+    width: 100%;
+    height: 300px;
+  }
 }
 main .our-tours .tour-display .tour-text {
   display: flex;
@@ -167,40 +198,77 @@ main .our-tours .tour-display .tour-text {
   width: 50%;
   margin: 5px;
 }
+@media (min-width: 820px) {
+  main .our-tours .tour-display .tour-text {
+    width: 100%;
+  }
+}
 main .our-tours .tour-display .tour-text .tour-header {
   display: flex;
   align-items: center;
   height: 30px;
-  background-color: hsl(42deg, 92%, 55%);
 }
 main .our-tours .tour-display .tour-text .tour-description {
-  height: 70px;
-  background-color: hsl(12deg, 80%, 49%);
+  height: 100px;
+}
+main .our-tours .tour-display .tour-text .tour-description p {
+  margin: 5px 0px 0px 0px;
+}
+@media (max-width: 600px) {
+  main .our-tours .tour-display .tour-text .tour-description p {
+    font-size: small;
+  }
 }
 main .our-tours .tour-display .tour-text .tour-date {
   display: flex;
   align-items: center;
+  font-weight: 600;
   height: 30px;
-  background-color: hsl(172deg, 29%, 71%);
 }
 main .our-tours .tour-display .tour-text .tour-price-and-booking {
   display: flex;
   justify-content: space-between;
-  background-color: hsl(238deg, 45%, 31%);
 }
 main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-price {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 50%;
-  background-color: hsl(238deg, 45%, 51%);
+  justify-content: flex-start;
+}
+main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-price p {
+  font-size: large;
+}
+@media (max-width: 600px) {
+  main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-price p {
+    font-size: medium;
+  }
 }
 main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: hsl(42deg, 92%, 75%);
+  justify-content: flex-end;
   width: 50%;
+}
+main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking a {
+  color: black;
+  text-decoration: none;
+  padding: 14px 16px;
+  display: block;
+  background-color: hsl(171deg, 30%, 91%);
+}
+@media (max-width: 600px) {
+  main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking a {
+    padding: 12px 14px;
+    font-size: small;
+  }
+}
+@media (max-width: 410px) {
+  main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking a {
+    padding: 10px 12px;
+    font-size: x-small;
+  }
+}
+main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking a:hover {
+  background-color: hsl(172deg, 29%, 71%);
+  color: white;
 }
 @media (min-width: 500px) {
   main .tokyo-tours-history {
@@ -257,21 +325,32 @@ main .tokyo-tours-staff .staff-member .staff-info {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
   background-color: hsl(171deg, 30%, 91%);
   width: 300px;
 }
 main .customer-reviews {
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 main .customer-reviews .review {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 350px;
-  height: 400px;
+  height: auto;
+  width: 100%;
   background-color: hsl(171deg, 30%, 91%);
   margin-bottom: 250px;
   padding: 5px;
+}
+@media (min-width: 700px) {
+  main .customer-reviews .review {
+    width: 100%;
+    max-width: 700px;
+  }
 }
 main .customer-reviews .review .user {
   display: flex;
@@ -336,9 +415,10 @@ main .customer-reviews .review .review-text {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 120px;
+  height: auto;
   width: 100%;
   background-color: hsl(42deg, 92%, 55%);
+  text-align: left;
 }
 main .customer-reviews .review .read-more-link {
   display: flex;
@@ -353,13 +433,99 @@ main .tokyo-tours-contact {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-bottom: 10%;
+}
+@media (min-width: 820px) {
+  main .tokyo-tours-contact {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  main .tokyo-tours-contact #top-image {
+    width: 70%;
+  }
+  main .tokyo-tours-contact .address-and-phone-number {
+    width: 30%;
+  }
 }
 main .contact-us {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 350px;
+  width: 100%;
+  height: auto;
   background-color: hsl(171deg, 30%, 91%);
+}
+@media (min-width: 400px) {
+  main .contact-us {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+main .contact-us label {
+  margin-left: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: large;
+}
+main .contact-us ::-moz-placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: large;
+  font-weight: 400;
+}
+main .contact-us :-ms-input-placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: large;
+  font-weight: 400;
+}
+main .contact-us ::placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: large;
+  font-weight: 400;
+}
+main .contact-us select {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid hsl(42deg, 92%, 55%);
+  border-radius: 8px;
+  background-color: hsl(42deg, 92%, 75%);
+  font-size: 16px;
+}
+main .contact-us textarea {
+  height: 200px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid hsl(42deg, 92%, 55%);
+  border-radius: 8px;
+  background-color: hsl(42deg, 92%, 75%);
+  font-size: 16px;
+  resize: none;
+}
+main .contact-us input[type=email] {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid hsl(42deg, 92%, 55%);
+  border-radius: 8px;
+  background-color: hsl(42deg, 92%, 75%);
+  font-size: 16px;
+}
+main .contact-us input[type=submit] {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid hsl(42deg, 92%, 55%);
+  border-radius: 8px;
+  background-color: hsl(42deg, 92%, 75%);
+  font-size: 16px;
+}
+main .contact-us input[type=submit]:hover {
+  background-color: hsl(42deg, 92%, 55%);
+  color: white;
 }
 
 .footer-div {
@@ -415,6 +581,7 @@ main .contact-us {
   .footer-div {
     display: flex;
     align-items: flex-start;
+    padding-left: 30px;
   }
   .social-media-text {
     display: none;
