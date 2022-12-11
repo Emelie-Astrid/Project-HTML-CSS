@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/style.css">
     <script src="https://kit.fontawesome.com/c0bfb1b86a.js" crossorigin="anonymous"></script>
     <script src="index.js" defer></script>
@@ -36,11 +35,6 @@
                         <li>
                             <a href="" class="active">CONTACT</a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                              </a>
-                        </li>
                     </ul>
                 </nav>
             </div>
@@ -52,27 +46,31 @@
             <section class="address-and-phone-number">
                 <h1>CONTACT</h1>
                 <h2>Address:</h2>
-                <p>Tokyo Tours</br> 
-                The Second street, no.3 </br>
-                198 76 City</p>
+                <address>
+                    Tokyo Tours
+                    <br>K-1 Bldg. 2F
+                    <br>7-2-6 Nishi-Shinjuku
+                    <br>160-0023 Shinjuku-ku
+                    <br>Tokyo, JAPAN
+                  </address>
                 <h3>Phone:</h3>
-                <p>+81-3-5330-5255</p>
+                <address>+81-3-5330-5255</address>
             </section>
         </section>
         <section class="contact-us">
             <h2>QUESTIONS?</h2>
             <form>
-                <label for="questions">What is your question about?</label><br/>
+                <label for="questions">What is your question about?</label>
                 <select name="questions" aria-labelledby="text-input">
                     <option disabled hidden selected>Choose here</option>
                     <option value="">Booking</option>
                     <option>Questions about tour</option>
                     <option>Feedback</option>
                     <option>Other</option>
-                </select><br/>
+                </select>
                 <label for="text-input" aria-labelledby="text-input">Tell us more:</label>
-                <textarea name="text-input" placeholder="Write here"></textarea><br/>
-                <label for="user-email">Your email:</label><br>
+                <textarea name="text-input" placeholder="Write here"></textarea>
+                <label for="user-email">Your email:</label>
                 <input type="email" placeholder="name@mail.com" aria-labelledby="email-input" name="email-input"><br><br>
                 <input type="submit" value="Submit">
             </form>

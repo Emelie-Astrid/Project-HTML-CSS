@@ -164,6 +164,7 @@ main {
         }
         aside {
             @include flex-column;
+            margin-bottom: 10%;
         }
     }
 
@@ -174,7 +175,7 @@ main {
 
         @media (min-width:820px) {
             width: 100%;
-            max-width: 1150px;
+            max-width: 1200px;
             height: auto;
             flex-direction: row;
             flex-wrap: wrap;
@@ -183,28 +184,34 @@ main {
 
         .staff-member {
             @include flex-column;
-            justify-content: space-between;
-            background-color: $halfsun;
             height: 500px;
-            width: 350px;
+            width: 100%;
             margin: 10px;
 
-            .staff-image {
+            @media (min-width:375px){
+                width: 375px;
+            }
+
+            img {
                 background-color: $lighttokyored;
-                height: 250px;
+                height: 50%;
                 width: 250px;
                 border-radius: 50%;
+                object-fit: contain;
             }
 
             .staff-info {
                 @include flex-column;
-                justify-content: space-around;
+                width: 100%;
                 text-align: center;
-                background-color: $barelymint;
-                width:300px;
+                height:50%;
+                p {
+                    margin:5px;
+                }
             }
         }
     }
+
     .customer-reviews {
         @include flex-column;
         width: 100%;
@@ -216,7 +223,7 @@ main {
             justify-content: space-around;
             height:auto;
             width: 100%;
-            background-color: $barelymint;
+            // background-color: $barelymint;
             margin-bottom: 250px;
             padding:5px;
 
@@ -229,8 +236,6 @@ main {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                width:100%;
-                background-color: $tokyored;
 
                 .user-image {
                     height: 60px;
@@ -242,12 +247,17 @@ main {
                 .user-name {
                     display: flex;
                     flex-direction: column;
-                    background-color: $yellowsun;
+                    margin-left:3%;
+
+                    p:first-of-type {
+                        font-weight: 600;
+                        font-size: medium;
+                    }
                     p {
-                        margin:0px;
+                        margin:3px;
+                        font-family: $nunito;
                     }
                 }
-
             }
 
             .rating {
@@ -256,14 +266,14 @@ main {
                 align-items: center;
                 height:40px;
                 width: 100%;
-                background-color: $lighttokyored;
+                margin-top: 3%;
 
                 .rating-circle {
                     height: 25px;
                     width: 25px;
                     border-radius: 50%;
-                    margin: 5px;
-                    background-color: $tokyored;
+                    margin-right: 10px;
+                    background-color: $palemidnightblue;
                     border-style: solid;
                     border-color: black;
                     border-width: 1px;
@@ -274,37 +284,34 @@ main {
                 }
             }
 
-            .date {
+            time {
                 @include flex-row;
                 height:40px;
                 width: 100%;
-                background-color: $palemidnightblue;
-            }
-
-            .review-title {
-                @include flex-row;
-                height:40px;
-                width: 100%;
-                background-color: $halfsun;
-                font-weight: bold;
+                font-family: $nunito;
+                margin-top: 1%;
             }
 
             .review-text {
                 @include flex-row;
                 height:auto;
-                width: 100%;
-                background-color: $yellowsun;
                 text-align: left
             }
 
-            .read-more-link {
-                @include flex-row;
-                height:40px;
-                width: 100%;
-                background-color: $midnightblue;
+            a {
+                text-align: right;
+                padding: 5px 8px;
+                color: black;
+                font-family: $nunito;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+
             }
         }
     }
+
     .tokyo-tours-contact {
         @include flex-column;
         text-align: center;
@@ -320,7 +327,6 @@ main {
             {
                 width: 30%;
             }
-
         }
     }
 
@@ -328,7 +334,6 @@ main {
         @include flex-column;;
         width:100%;
         height: auto;
-        background-color: $barelymint;
 
         @media (min-width:400px) {
             width: 100%;
@@ -336,14 +341,13 @@ main {
             height: auto;
         }
 
-
         label {
             margin-left: 10px;
-            font-family: $ssp;
+            font-family: $nunito;
             font-size: large;
         }
         ::placeholder {
-            font-family: $ssp;
+            font-family: $nunito;
             font-size: large;
             font-weight: 400;
         }
@@ -366,9 +370,10 @@ main {
 
         input[type=submit] {
             height: 50px;
+            font-family: $nunito;
             @include input-styling;
             &:hover {
-                background-color: $yellowsun;
+                background-color: $mintgreen;
                 color:white;
             }
         }
