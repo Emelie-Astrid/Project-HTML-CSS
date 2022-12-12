@@ -91,6 +91,7 @@ main a {
 main #top-image {
   width: 100%;
   height: auto;
+  margin-bottom: 3%;
 }
 @media (min-width: 820px) {
   main #top-image {
@@ -103,6 +104,7 @@ main .intro {
   text-align: center;
   width: 100%;
   height: auto;
+  margin-bottom: 3%;
 }
 @media (min-width: 500px) {
   main .intro {
@@ -111,15 +113,39 @@ main .intro {
     height: auto;
   }
 }
-main .tour-link a {
+main .intro.review {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 7%;
+}
+@media (min-width: 500px) {
+  main .intro.review {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+}
+main a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: black;
   text-decoration: none;
 }
-main .tour-link a:hover {
+main a:hover {
   text-decoration: underline;
 }
-main .sorting-buttons {
-  margin-bottom: 70px;
+main a img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 820px) {
+  main a img {
+    width: 100%;
+    max-width: 820px;
+    height: auto;
+  }
 }
 main .tour-slideshow {
   background-color: hsl(42deg, 92%, 55%);
@@ -193,10 +219,11 @@ main .our-tours .tour-display .tour-text .tour-description {
 }
 main .our-tours .tour-display .tour-text .tour-description p {
   margin: 5px 0px 0px 0px;
+  font-size: small;
 }
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   main .our-tours .tour-display .tour-text .tour-description p {
-    font-size: small;
+    font-size: medium;
   }
 }
 main .our-tours .tour-display .tour-text .tour-date {
@@ -214,11 +241,11 @@ main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-price {
   justify-content: flex-start;
 }
 main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-price p {
-  font-size: large;
+  font-size: medium;
 }
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-price p {
-    font-size: medium;
+    font-size: large;
   }
 }
 main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking {
@@ -230,20 +257,21 @@ main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking {
 main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking a {
   color: black;
   text-decoration: none;
-  padding: 14px 16px;
   display: block;
   background-color: hsl(171deg, 30%, 91%);
+  padding: 10px 12px;
+  font-size: x-small;
 }
-@media (max-width: 600px) {
+@media (min-width: 600px) {
+  main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking a {
+    padding: 14px 16px;
+    font-size: medium;
+  }
+}
+@media (min-width: 410px) {
   main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking a {
     padding: 12px 14px;
     font-size: small;
-  }
-}
-@media (max-width: 410px) {
-  main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking a {
-    padding: 10px 12px;
-    font-size: x-small;
   }
 }
 main .our-tours .tour-display .tour-text .tour-price-and-booking .tour-booking a:hover {
@@ -344,11 +372,16 @@ main .customer-reviews .review .user {
   flex-direction: row;
   align-items: center;
 }
-main .customer-reviews .review .user .user-image {
+main .customer-reviews .review .user img {
   height: 60px;
   width: 60px;
   border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: hsl(42deg, 92%, 75%);
+  border-style: dotted;
+  border-color: hsl(238deg, 45%, 31%);
+  border-width: 2px;
 }
 main .customer-reviews .review .user .user-name {
   display: flex;
@@ -384,6 +417,24 @@ main .customer-reviews .review .rating .rating-circle {
 main .customer-reviews .review .rating .rating-circle:nth-child(5) {
   background-color: transparent;
 }
+main .customer-reviews .review .rating.five {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  margin-top: 3%;
+}
+main .customer-reviews .review .rating.five .rating-circle {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: hsl(238deg, 45%, 51%);
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
 main .customer-reviews .review time {
   display: flex;
   flex-direction: row;
@@ -401,7 +452,9 @@ main .customer-reviews .review .review-text {
   text-align: left;
 }
 main .customer-reviews .review a {
-  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   padding: 5px 8px;
   color: black;
   font-family: "Nunito", sans-serif;
@@ -513,14 +566,24 @@ main .contact-us input[type=submit]:hover {
 .footer-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 400px;
+  justify-content: space-between;
+  height: auto;
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
   font-size: large;
   background-color: hsl(171deg, 30%, 91%);
   margin-top: 70px;
+}
+@media (min-width: 820px) {
+  .footer-div {
+    align-items: center;
+  }
+  .footer-div nav ul {
+    justify-content: flex-start;
+  }
+  .footer-div .copyright {
+    text-align: center;
+  }
 }
 .footer-div img {
   height: 60px;
@@ -544,12 +607,12 @@ main .contact-us input[type=submit]:hover {
   text-decoration: none;
   padding: 5px 8px;
 }
+.footer-div a:hover {
+  background-color: hsl(172deg, 29%, 71%);
+  color: white;
+}
 .footer-div a.active {
   text-decoration: underline;
-}
-.footer-div a:hover {
-  background-color: hsl(42deg, 92%, 75%);
-  color: white;
 }
 .footer-div .social-media-links {
   display: flex;
@@ -558,14 +621,26 @@ main .contact-us input[type=submit]:hover {
 .footer-div .social-media-links .fa-brands {
   padding: 7px;
 }
-
-@media (max-width: 820px) {
-  .footer-div {
-    display: flex;
-    align-items: flex-start;
-    padding-left: 30px;
+.footer-div .social-media-text {
+  display: none;
+}
+@media (min-width: 820px) {
+  .footer-div .social-media-text {
+    display: contents;
   }
-  .social-media-text {
-    display: none;
-  }
+}
+.footer-div .copyright p {
+  font-size: small;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+.footer-div .copyright a {
+  color: black;
+  text-decoration: none;
+  padding: 0px;
+}
+.footer-div .copyright a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
