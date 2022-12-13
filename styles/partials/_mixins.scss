@@ -1,4 +1,5 @@
 //FLEXBOX
+
 @mixin flex-column {
 	display: flex;
 	flex-direction: column;
@@ -16,6 +17,16 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+@mixin column {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin center {
+	display: flex;
+	align-items: center;
 }
 
 //TEXT AND LINKS
@@ -58,7 +69,6 @@
 	}
 }
 
-
 @mixin input-styling {
 	width: 100%;
 	padding: 10px;
@@ -69,4 +79,26 @@
 	font-size: 16px;
 }
 
-//IMAGES
+//CONTENT
+
+@mixin width-100-height-auto {
+	width: 100%;
+	height: auto;
+}
+
+@mixin rating {
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: $palemidnightblue;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
+
+@mixin rating-size {
+	height:40px;
+	width: 100%;
+	margin-top: 3%;
+}

@@ -96,14 +96,14 @@ main #top-image {
 @media (min-width: 820px) {
   main #top-image {
     width: 100%;
-    max-width: 1150px;
     height: auto;
+    max-width: 1150px;
   }
 }
 main .intro {
-  text-align: center;
   width: 100%;
   height: auto;
+  text-align: center;
   margin-bottom: 3%;
 }
 @media (min-width: 500px) {
@@ -114,9 +114,9 @@ main .intro {
   }
 }
 main .intro.review {
-  text-align: center;
   width: 100%;
   height: auto;
+  text-align: center;
   margin-bottom: 7%;
 }
 @media (min-width: 500px) {
@@ -143,14 +143,9 @@ main a img {
 @media (min-width: 820px) {
   main a img {
     width: 100%;
-    max-width: 820px;
     height: auto;
+    max-width: 820px;
   }
-}
-main .tour-slideshow {
-  background-color: hsl(42deg, 92%, 55%);
-  height: 300px;
-  width: 100%;
 }
 main .our-tours {
   display: flex;
@@ -306,8 +301,8 @@ main .tokyo-tours-staff {
 @media (min-width: 820px) {
   main .tokyo-tours-staff {
     width: 100%;
-    max-width: 1200px;
     height: auto;
+    max-width: 1200px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -353,11 +348,11 @@ main .customer-reviews {
   height: auto;
 }
 main .customer-reviews .review {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: auto;
-  width: 100%;
   margin-bottom: 250px;
   padding: 5px;
 }
@@ -381,12 +376,12 @@ main .customer-reviews .review .user img {
   background-color: hsl(42deg, 92%, 75%);
   border-style: dotted;
   border-color: hsl(238deg, 45%, 31%);
-  border-width: 2px;
+  border-width: 3px;
 }
 main .customer-reviews .review .user .user-name {
   display: flex;
   flex-direction: column;
-  margin-left: 3%;
+  margin-left: 15px;
 }
 main .customer-reviews .review .user .user-name p:first-of-type {
   font-weight: 600;
@@ -463,6 +458,9 @@ main .customer-reviews .review a {
 main .customer-reviews .review a:hover {
   text-decoration: underline;
 }
+main .customer-reviews .review:last-of-type {
+  margin-bottom: 150px;
+}
 main .tokyo-tours-contact {
   display: flex;
   flex-direction: column;
@@ -482,6 +480,9 @@ main .tokyo-tours-contact {
     width: 30%;
   }
 }
+main h1 {
+  font-size: x-large;
+}
 main .contact-us {
   display: flex;
   flex-direction: column;
@@ -497,9 +498,9 @@ main .contact-us {
   }
 }
 main .contact-us label {
-  margin-left: 10px;
   font-family: "Nunito", sans-serif;
   font-size: large;
+  margin-left: 10px;
 }
 main .contact-us ::-moz-placeholder {
   font-family: "Nunito", sans-serif;
@@ -517,7 +518,6 @@ main .contact-us ::placeholder {
   font-weight: 400;
 }
 main .contact-us select {
-  height: 50px;
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -525,9 +525,9 @@ main .contact-us select {
   border-radius: 8px;
   background-color: hsl(171deg, 30%, 91%);
   font-size: 16px;
+  height: 50px;
 }
 main .contact-us textarea {
-  height: 200px;
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -535,10 +535,10 @@ main .contact-us textarea {
   border-radius: 8px;
   background-color: hsl(171deg, 30%, 91%);
   font-size: 16px;
+  height: 200px;
   resize: none;
 }
 main .contact-us input[type=email] {
-  height: 50px;
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -546,10 +546,9 @@ main .contact-us input[type=email] {
   border-radius: 8px;
   background-color: hsl(171deg, 30%, 91%);
   font-size: 16px;
+  height: 50px;
 }
 main .contact-us input[type=submit] {
-  height: 50px;
-  font-family: "Nunito", sans-serif;
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -557,6 +556,8 @@ main .contact-us input[type=submit] {
   border-radius: 8px;
   background-color: hsl(171deg, 30%, 91%);
   font-size: 16px;
+  height: 50px;
+  font-family: "Nunito", sans-serif;
 }
 main .contact-us input[type=submit]:hover {
   background-color: hsl(172deg, 29%, 71%);
@@ -564,11 +565,11 @@ main .contact-us input[type=submit]:hover {
 }
 
 .footer-div {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: auto;
-  width: 100%;
   font-family: "Source Sans Pro", sans-serif;
   font-size: large;
   background-color: hsl(171deg, 30%, 91%);
@@ -584,6 +585,9 @@ main .contact-us input[type=submit]:hover {
   .footer-div .copyright {
     text-align: center;
   }
+}
+.footer-div .logo a:hover {
+  background-color: transparent;
 }
 .footer-div img {
   height: 60px;

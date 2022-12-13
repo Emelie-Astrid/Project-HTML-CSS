@@ -1,6 +1,5 @@
 .header-div {
-  display: flex;
-  align-items: center;
+  @include center;
   height: 70px;
   font-family: $nunito;
 
@@ -59,7 +58,6 @@
         background-color: $halfsun;
         color:white;
     }
-
     }
   }
 }
